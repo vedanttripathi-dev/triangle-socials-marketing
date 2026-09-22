@@ -1,0 +1,18 @@
+# The sitemap address below is your domain (see README.md)
+User-agent: *
+Allow: /
+
+# AI search and assistant crawlers are welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://triangle-socials.pages.dev/sitemap.xml

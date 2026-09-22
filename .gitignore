@@ -1,0 +1,32 @@
+# Triangle Socials website
+#
+# This is a plain static site: no Node, no bundler, no build step.
+# Everything tracked in this repository is deployed as-is, so keep this list
+# short. In particular do NOT ignore _headers or _redirects: Cloudflare Pages
+# needs both, and they start with an underscore, not a dot.
+
+# Operating system junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+*~
+
+# Secrets and local environment (nothing here needs them today, but never commit one)
+.env
+.env.*
+
+# Local scratch and preview output
+*.log
+/tmp/
+/.cache/

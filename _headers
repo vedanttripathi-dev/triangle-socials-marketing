@@ -1,0 +1,22 @@
+# Cloudflare Pages response headers (applied to every page and file).
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000
+  # The 'sha256-...' value allows the one tiny inline script in <head> that adds the "js" class.
+  # If you edit that script, recompute its hash. If you switch on analytics in js/config.js, allow its domains:
+  #   Cloudflare Web Analytics: script-src https://static.cloudflareinsights.com ; connect-src https://cloudflareinsights.com
+  #   Google Analytics / Tag Manager: script-src https://www.googletagmanager.com ; connect-src https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com ; img-src https://*.google-analytics.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Images and icons change rarely: cache for 30 days.
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+# CSS and JS: cache for 1 hour so edits (like config.js) show up quickly.
+/css/*
+  Cache-Control: public, max-age=3600
+/js/*
+  Cache-Control: public, max-age=3600

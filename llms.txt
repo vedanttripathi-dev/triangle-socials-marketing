@@ -1,0 +1,32 @@
+# Triangle Socials
+
+> Triangle Socials is a founder-led agency for social media marketing, Google Ads, Local SEO, Google Business Profile optimisation, content and performance marketing. Founded by Vedant Tripathi and Harshit Tiwari.
+
+Triangle Socials helps businesses get discovered, build attention and generate enquiries by combining social media, Google Search, Google Maps and local search, and paid campaigns. The work suits businesses that depend on local customers, such as hospitals and clinics, real estate, schools and coaching institutes, hotels and restaurants, salons and home services, and professional services. These are examples of who the services suit, not a list of current clients.
+
+The founders have worked on the VedicVox YouTube channel (https://www.youtube.com/@VedicVox) and its marketing and content operations, including Meta Ads, promotion, podcast shooting, content and script writing and channel management, for approximately five years. They also come from a family business with roughly 50 years of legacy. VedicVox is an example of the founders' experience; it is not a social media profile of Triangle Socials.
+
+Triangle Socials does not promise guaranteed Google rankings, guaranteed leads or guaranteed advertising results. Google states that organic local ranking cannot be bought or requested and depends mainly on relevance, distance and prominence.
+
+The whole site is one page.
+
+## Services
+- Social media and content: social media management and marketing, content strategy and creation, content writing, script writing, YouTube management, podcast production, brand promotion
+- Google and local growth: Google Ads, Google Search Ads, Google Business Profile optimisation, Google Maps and Local SEO, Google Search SEO, local keyword research, local citations, review strategy, location landing pages
+- Performance marketing: Meta Ads, Google Ads, conversion tracking, campaign optimisation, remarketing, landing page optimisation, lead generation
+- Digital brand growth: digital marketing strategy, brand positioning, website strategy, analytics and measurement
+
+## Sections
+- [Home](https://triangle-socials.pages.dev/): what Triangle Socials does
+- [Services](https://triangle-socials.pages.dev/#services): the four service groups
+- [Google and local growth](https://triangle-socials.pages.dev/#google-local): Google Ads, Business Profile, Maps and Local SEO, SEO, landing pages, conversion tracking
+- [Industries](https://triangle-socials.pages.dev/#industries): the kinds of businesses these services suit
+- [Experience](https://triangle-socials.pages.dev/#experience): the VedicVox case study and the family business background
+- [Founders](https://triangle-socials.pages.dev/#founders): Vedant Tripathi and Harshit Tiwari, Co-Founders
+- [How we work](https://triangle-socials.pages.dev/#process): understand, plan, build and launch, measure and improve
+- [FAQ](https://triangle-socials.pages.dev/#faq): Google Ads, Local SEO, Business Profile, rankings and pricing
+- [Contact](https://triangle-socials.pages.dev/#contact): WhatsApp is the primary way to get in touch
+
+## Contact
+- WhatsApp: +91 9559059933 (https://wa.me/919559059933)
+- Email: trianglesocials@gmail.com

@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects. Format: <from> <to> <status>
+# Pages already serves /index.html as / and strips .html from page URLs.
+/home  /  301

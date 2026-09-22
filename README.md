@@ -179,6 +179,37 @@ Off by default, so nothing loads that you did not ask for. Add an ID in `js/conf
 
 ---
 
+## Security
+
+There is no server, no database, no login, no admin area and no API in this project. It is static files served by Cloudflare, so the attack surface is small by design — please keep it that way.
+
+**Response headers** (all in `_headers`, applied to every file):
+
+| Header | Why |
+| --- | --- |
+| `Content-Security-Policy` | Only this origin may supply scripts, styles, images and fonts. `object-src 'none'`, `base-uri 'self'`, `form-action 'self'`, `frame-ancestors 'none'` |
+| `Strict-Transport-Security` | One year, including subdomains — browsers refuse plain HTTP afterwards |
+| `X-Content-Type-Options: nosniff` | Stops browsers guessing a file's type |
+| `X-Frame-Options: DENY` | Clickjacking protection for older browsers; `frame-ancestors` covers modern ones |
+| `Referrer-Policy` | Full URLs are never sent to other sites |
+| `Permissions-Policy` | Camera, microphone, geolocation, payment, USB and topics all switched off |
+| `Cross-Origin-Opener-Policy: same-origin` | Isolates this site's browsing context from windows it opens |
+
+**Rules to keep:**
+
+- Never put an API key, token or password in this repository. Everything here is public the moment it deploys.
+- The CSP allows exactly one inline script, by SHA-256 hash. Edit that script and you must recompute the hash, or it will be blocked.
+- All JavaScript builds DOM nodes with `createElement` and `textContent`. There is no `innerHTML` anywhere, and it should stay that way — that is what keeps injected markup from ever executing.
+- External URLs from `config.js` pass through `safeUrl()`, which accepts only `http:` and `https:`. Do not bypass it.
+- Every link opening a new tab uses `rel="noopener noreferrer"`.
+- If a contact form is ever added, it needs a server or a form service, plus its origin added to `form-action` in the CSP.
+
+**Rate limiting, WAF and bot protection** are Cloudflare dashboard settings, not files in this repository. If you turn them on, do not block Googlebot, Bingbot or the AI crawlers named in `robots.txt`, and do not make decisions on user-agent alone.
+
+This is sensible production hardening, not a guarantee. No public website can be made impossible to attack or to copy, and anti-copy scripts are deliberately not used here because they break accessibility and search without stopping anyone.
+
+---
+
 ## Things this site deliberately does not do
 
 No invented clients, testimonials, statistics, ratings, awards, prices or addresses, and no `LocalBusiness` structured data, because no business address has been supplied. The copy never promises guaranteed rankings, leads or advertising results — Google states that organic local ranking cannot be bought or requested and depends mainly on relevance, distance and prominence. Please keep it that way; false claims are a credibility risk and, in structured data, against Google's guidelines.

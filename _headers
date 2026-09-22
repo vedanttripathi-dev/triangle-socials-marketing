@@ -4,7 +4,8 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
-  Strict-Transport-Security: max-age=31536000
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin
   # The 'sha256-...' value allows the one tiny inline script in <head> that adds the "js" class.
   # If you edit that script, recompute its hash. If you switch on analytics in js/config.js, allow its domains:
   #   Cloudflare Web Analytics: script-src https://static.cloudflareinsights.com ; connect-src https://cloudflareinsights.com

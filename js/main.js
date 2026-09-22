@@ -4,7 +4,10 @@
 (() => {
   "use strict";
 
-  const C = SITE_CONFIG;
+  /* If config.js ever fails to load, fall back to an empty object rather than
+     throwing: the contact links are already written into the HTML, and the nav,
+     scroll-spy and reveals below keep working. */
+  const C = typeof SITE_CONFIG !== "undefined" ? SITE_CONFIG : {};
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const SVG_NS = "http://www.w3.org/2000/svg";
@@ -23,17 +26,31 @@
   /* ---- Contact details (WhatsApp, email, VedicVox) ------------------------ */
   const waLink = (text) => `https://wa.me/${digits(C.whatsappNumber)}?text=${encodeURIComponent(text)}`;
 
-  $$("[data-wa]").forEach((el) => {
-    const service = el.dataset.waService;
-    el.href = waLink(service ? `Hi ${C.companyName}, I would like to discuss ${service}.` : C.whatsappMessage);
-    el.target = "_blank";
-    el.rel = "noopener noreferrer";
-  });
-  $$("[data-whatsapp-display]").forEach((el) => { el.textContent = C.whatsappDisplay; });
-  $$("[data-email]").forEach((a) => {
-    a.href = `mailto:${C.email}`;
-    if (a.hasAttribute("data-email-text")) a.textContent = C.email;
-  });
+  /* Each block below only overwrites the markup when config.js actually supplies
+     the value. index.html already carries the real WhatsApp link, number and
+     email, so a missing or blank setting leaves the working HTML in place
+     instead of replacing it with an empty one. */
+  if (digits(C.whatsappNumber)) {
+    $$("[data-wa]").forEach((el) => {
+      const service = el.dataset.waService;
+      const message = service
+        ? `Hi ${C.companyName || "Triangle Socials"}, I would like to discuss ${service}.`
+        : C.whatsappMessage;
+      if (!service && !message) return;
+      el.href = waLink(message);
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    });
+  }
+  if (C.whatsappDisplay) {
+    $$("[data-whatsapp-display]").forEach((el) => { el.textContent = C.whatsappDisplay; });
+  }
+  if (C.email) {
+    $$("[data-email]").forEach((a) => {
+      a.href = `mailto:${C.email}`;
+      if (a.hasAttribute("data-email-text")) a.textContent = C.email;
+    });
+  }
   const vedicVox = safeUrl(C.vedicVoxUrl);
   if (vedicVox) {
     $$("[data-vedicvox]").forEach((a) => { a.href = vedicVox; a.target = "_blank"; a.rel = "noopener noreferrer"; });

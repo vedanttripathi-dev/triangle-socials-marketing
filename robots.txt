@@ -1,9 +1,15 @@
-# The sitemap address below is your domain (see README.md)
+# Everything here is public marketing content, so every crawler is allowed.
+# Nothing is blocked: this file is for crawler guidance, never for security.
+# The sitemap address below is your domain (see README.md).
 User-agent: *
 Allow: /
 
-# AI search and assistant crawlers are welcome
+# Named explicitly so the intent is obvious to anyone reading this file.
+# The wildcard rule above already allows them.
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -13,6 +19,9 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://triangle-socials.pages.dev/sitemap.xml

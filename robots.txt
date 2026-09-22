@@ -24,4 +24,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://triangle-socials.pages.dev/sitemap.xml
+Sitemap: https://triangle-code.pages.dev/sitemap.xml

@@ -16,8 +16,13 @@
 /assets/*
   Cache-Control: public, max-age=2592000
 
-# CSS and JS: cache for 1 hour so edits (like config.js) show up quickly.
+# CSS: cache for 1 hour.
 /css/*
   Cache-Control: public, max-age=3600
+
+# JS: 5 minutes. config.js holds the phone number and email, and main.js writes
+# them over the links already in the HTML. A long cache here means a stale
+# config.js can put the OLD details back on a page that is otherwise correct,
+# so keep this short.
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300

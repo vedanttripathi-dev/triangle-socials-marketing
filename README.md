@@ -103,12 +103,12 @@ Near the top of `index.html`:
 
 ### Your domain
 
-The site currently uses **`triangle-socials.pages.dev`**, the address given by Cloudflare Pages. It appears in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt` — in the canonical tag, the Open Graph tags, the structured data and the sitemap.
+The site currently uses **`triangle-code.pages.dev`**, the address given by Cloudflare Pages. It appears in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt` — in the canonical tag, the Open Graph tags, the structured data and the sitemap.
 
 When you buy a real domain, connect it in the Cloudflare Pages project under **Custom domains**, then swap the address everywhere:
 
 ```powershell
-$old = "triangle-socials.pages.dev"
+$old = "triangle-code.pages.dev"
 $new = "trianglesocials.com"   # your domain, without https://
 Get-ChildItem -Path . -Recurse -File -Include *.html,*.xml,*.txt,*.webmanifest | ForEach-Object {
   $text = [IO.File]::ReadAllText($_.FullName)

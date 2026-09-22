@@ -17,15 +17,15 @@ The whole site is one page.
 - Digital brand growth: digital marketing strategy, brand positioning, website strategy, analytics and measurement
 
 ## Sections
-- [Home](https://triangle-socials.pages.dev/): what Triangle Socials does
-- [Services](https://triangle-socials.pages.dev/#services): the four service groups
-- [Google and local growth](https://triangle-socials.pages.dev/#google-local): Google Ads, Business Profile, Maps and Local SEO, SEO, landing pages, conversion tracking
-- [Industries](https://triangle-socials.pages.dev/#industries): the kinds of businesses these services suit
-- [Experience](https://triangle-socials.pages.dev/#experience): the VedicVox case study and the family business background
-- [Founders](https://triangle-socials.pages.dev/#founders): Vedant Tripathi and Harshit Tiwari, Co-Founders
-- [How we work](https://triangle-socials.pages.dev/#process): understand, plan, build and launch, measure and improve
-- [FAQ](https://triangle-socials.pages.dev/#faq): Google Ads, Local SEO, Business Profile, rankings and pricing
-- [Contact](https://triangle-socials.pages.dev/#contact): WhatsApp is the primary way to get in touch
+- [Home](https://triangle-code.pages.dev/): what Triangle Socials does
+- [Services](https://triangle-code.pages.dev/#services): the four service groups
+- [Google and local growth](https://triangle-code.pages.dev/#google-local): Google Ads, Business Profile, Maps and Local SEO, SEO, landing pages, conversion tracking
+- [Industries](https://triangle-code.pages.dev/#industries): the kinds of businesses these services suit
+- [Experience](https://triangle-code.pages.dev/#experience): the VedicVox case study and the family business background
+- [Founders](https://triangle-code.pages.dev/#founders): Vedant Tripathi and Harshit Tiwari, Co-Founders
+- [How we work](https://triangle-code.pages.dev/#process): understand, plan, build and launch, measure and improve
+- [FAQ](https://triangle-code.pages.dev/#faq): Google Ads, Local SEO, Business Profile, rankings and pricing
+- [Contact](https://triangle-code.pages.dev/#contact): WhatsApp is the primary way to get in touch
 
 ## Contact
 - WhatsApp: +91 9555905993 (https://wa.me/919555905993)

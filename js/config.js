@@ -15,8 +15,8 @@ const SITE_CONFIG = {
   email: "trianglesocials@gmail.com",
 
   /* WhatsApp: digits only, country code first, no "+" or spaces. */
-  whatsappNumber: "919559059933",
-  whatsappDisplay: "+91 9559059933",
+  whatsappNumber: "919555905993",
+  whatsappDisplay: "+91 9555905993",
   whatsappMessage: "Hi Triangle Socials, I would like to discuss your services.",
 
   /* Featured experience / case study */
